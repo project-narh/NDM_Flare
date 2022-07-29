@@ -1,0 +1,97 @@
+
+animation - 복사본.png
+size: 2026,1070
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bcloack
+  rotate: true
+  xy: 1427, 169
+  size: 560, 269
+  orig: 560, 269
+  offset: 0, 0
+  index: -1
+Larm_down
+  rotate: true
+  xy: 2, 2
+  size: 220, 312
+  orig: 220, 312
+  offset: 0, 0
+  index: -1
+Larm_up
+  rotate: false
+  xy: 1698, 5
+  size: 217, 408
+  orig: 217, 408
+  offset: 0, 0
+  index: -1
+Lleg_down
+  rotate: true
+  xy: 718, 21
+  size: 201, 392
+  orig: 201, 392
+  offset: 0, 0
+  index: -1
+Lleg_up
+  rotate: false
+  xy: 1698, 415
+  size: 228, 406
+  orig: 228, 406
+  offset: 0, 0
+  index: -1
+Rarm_down
+  rotate: true
+  xy: 1112, 7
+  size: 160, 326
+  orig: 160, 326
+  offset: 0, 0
+  index: -1
+Rarm_up
+  rotate: true
+  xy: 1568, 823
+  size: 245, 456
+  orig: 245, 456
+  offset: 0, 0
+  index: -1
+Rleg_down
+  rotate: true
+  xy: 316, 13
+  size: 209, 400
+  orig: 209, 400
+  offset: 0, 0
+  index: -1
+Rleg_up
+  rotate: true
+  xy: 964, 531
+  size: 198, 418
+  orig: 198, 418
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 964, 731
+  size: 337, 602
+  orig: 337, 602
+  offset: 0, 0
+  index: -1
+cloack
+  rotate: false
+  xy: 964, 357
+  size: 349, 172
+  orig: 349, 172
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 345
+  size: 723, 960
+  orig: 723, 960
+  offset: 0, 0
+  index: -1
+wea
+  rotate: false
+  xy: 2, 224
+  size: 1423, 119
+  orig: 1423, 119
+  offset: 0, 0
+  index: -1

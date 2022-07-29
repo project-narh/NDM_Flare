@@ -1,0 +1,41 @@
+
+infectorgirlattackef.png
+size: 1603,1328
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+center point
+  rotate: false
+  xy: 1552, 541
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+end
+  rotate: false
+  xy: 2, 107
+  size: 581, 317
+  orig: 581, 317
+  offset: 0, 0
+  index: -1
+main
+  rotate: false
+  xy: 2, 426
+  size: 823, 900
+  orig: 823, 900
+  offset: 0, 0
+  index: -1
+particles
+  rotate: true
+  xy: 827, 2
+  size: 555, 723
+  orig: 555, 723
+  offset: 0, 0
+  index: -1
+start
+  rotate: false
+  xy: 827, 559
+  size: 774, 767
+  orig: 774, 767
+  offset: 0, 0
+  index: -1

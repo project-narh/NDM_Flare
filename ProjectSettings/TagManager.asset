@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Friend
+  - Enemy
+  - Friend_Attack
+  - Enemy_Range
+  - Enemy_Attack
+  - Friend_Range
+  - F_Core
+  - E_Core
+  - Distance
+  - Spawner
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - F_Mob
+  - E_Mob
+  - F_Range
+  - E_Range
+  - F_Attack
+  - E_Attack
+  - F_Core
+  - E_Core
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 528264865
+    locked: 0
+  - name: Mob
+    uniqueID: 2292339427
+    locked: 0
+  - name: Player
+    uniqueID: 510035825
+    locked: 0
+  - name: UI
+    uniqueID: 291299391
+    locked: 0

@@ -1,0 +1,90 @@
+
+ShieldWoman.png
+size: 1031,1064
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Larm1
+  rotate: true
+  xy: 590, 500
+  size: 178, 289
+  orig: 178, 289
+  offset: 0, 0
+  index: -1
+Larm2
+  rotate: false
+  xy: 739, 2
+  size: 128, 220
+  orig: 128, 220
+  offset: 0, 0
+  index: -1
+Lleg1
+  rotate: false
+  xy: 881, 498
+  size: 120, 282
+  orig: 120, 282
+  offset: 0, 0
+  index: -1
+Lleg2
+  rotate: true
+  xy: 497, 32
+  size: 151, 240
+  orig: 151, 240
+  offset: 0, 0
+  index: -1
+Rarm1
+  rotate: false
+  xy: 872, 85
+  size: 147, 182
+  orig: 147, 182
+  offset: 0, 0
+  index: -1
+Rarm2
+  rotate: false
+  xy: 497, 185
+  size: 201, 313
+  orig: 201, 313
+  offset: 0, 0
+  index: -1
+Rleg1
+  rotate: false
+  xy: 873, 782
+  size: 130, 280
+  orig: 130, 280
+  offset: 0, 0
+  index: -1
+Rleg2
+  rotate: false
+  xy: 872, 269
+  size: 157, 227
+  orig: 157, 227
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 590, 680
+  size: 281, 382
+  orig: 281, 382
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 35
+  size: 493, 469
+  orig: 493, 469
+  offset: 0, 0
+  index: -1
+underbody
+  rotate: true
+  xy: 700, 224
+  size: 274, 170
+  orig: 274, 170
+  offset: 0, 0
+  index: -1
+wea
+  rotate: false
+  xy: 2, 506
+  size: 586, 556
+  orig: 586, 556
+  offset: 0, 0
+  index: -1

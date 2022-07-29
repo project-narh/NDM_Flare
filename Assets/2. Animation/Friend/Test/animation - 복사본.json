@@ -1,0 +1,160 @@
+{
+"skeleton": {
+	"hash": "gC3jHC75SzyX4ROtS/czbaTyMpA",
+	"spine": "3.8.75",
+	"x": -925.85,
+	"y": -4.37,
+	"width": 1381.63,
+	"height": 1860.36,
+	"images": "../NDM/Work/images/",
+	"audio": "D:/하드 백업/NDM/Work"
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Lleg_up", "bone": "root", "attachment": "Lleg_up" },
+	{ "name": "Lleg_down", "bone": "root", "attachment": "Lleg_down" },
+	{ "name": "Bcloack", "bone": "root", "attachment": "Bcloack" },
+	{ "name": "Larm_up", "bone": "root", "attachment": "Larm_up" },
+	{ "name": "Larm_down", "bone": "root", "attachment": "Larm_down" },
+	{ "name": "Rleg_up", "bone": "root", "attachment": "Rleg_up" },
+	{ "name": "Rleg_down", "bone": "root", "attachment": "Rleg_down" },
+	{ "name": "body", "bone": "root", "attachment": "body" },
+	{ "name": "wea", "bone": "root", "attachment": "wea" },
+	{ "name": "head", "bone": "root", "attachment": "head" },
+	{ "name": "cloack", "bone": "root", "attachment": "cloack" },
+	{ "name": "Rarm_up", "bone": "root", "attachment": "Rarm_up" },
+	{ "name": "Rarm_down", "bone": "root", "attachment": "Rarm_down" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Rleg_down": {
+				"Rleg_down": { "x": -121.92, "y": 195.63, "width": 209, "height": 400 }
+			},
+			"wea": {
+				"wea": { "x": -235.03, "y": 416.13, "rotation": -19.42, "width": 1423, "height": 119 }
+			},
+			"head": {
+				"head": { "x": -73.33, "y": 1375.98, "width": 723, "height": 960 }
+			},
+			"body": {
+				"body": { "x": -36.33, "y": 755.98, "width": 337, "height": 602 }
+			},
+			"cloack": {
+				"cloack": { "x": -42.33, "y": 944.98, "width": 349, "height": 172 }
+			},
+			"Bcloack": {
+				"Bcloack": { "x": -246.83, "y": 841.48, "width": 560, "height": 269 }
+			},
+			"Larm_up": {
+				"Larm_up": { "x": 146.79, "y": 845.57, "rotation": 0.18, "width": 217, "height": 408 }
+			},
+			"Rarm_up": {
+				"Rarm_up": { "x": -241.76, "y": 793.98, "width": 245, "height": 456 }
+			},
+			"Larm_down": {
+				"Larm_down": { "x": 206.29, "y": 596.57, "width": 220, "height": 312 }
+			},
+			"Rarm_down": {
+				"Rarm_down": { "x": -290.83, "y": 555.98, "width": 160, "height": 326 }
+			},
+			"Lleg_up": {
+				"Lleg_up": { "x": 49.76, "y": 388.78, "width": 228, "height": 406 }
+			},
+			"Rleg_up": {
+				"Rleg_up": { "x": -101.23, "y": 407.78, "width": 198, "height": 418 }
+			},
+			"Lleg_down": {
+				"Lleg_down": { "x": 96.92, "y": 193.53, "width": 201, "height": 392 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"wea": {
+				"attachment": [
+					{ "name": "wea" },
+					{ "time": 3.3333, "name": "wea" }
+				]
+			},
+			"Lleg_up": {
+				"attachment": [
+					{ "name": "Lleg_up" },
+					{ "time": 3.3333, "name": "Lleg_up" }
+				]
+			},
+			"Bcloack": {
+				"attachment": [
+					{ "name": "Bcloack" },
+					{ "time": 3.3333, "name": "Bcloack" }
+				]
+			},
+			"Rarm_up": {
+				"attachment": [
+					{ "name": "Rarm_up" },
+					{ "time": 3.3333, "name": "Rarm_up" }
+				]
+			},
+			"Rleg_up": {
+				"attachment": [
+					{ "name": "Rleg_up" },
+					{ "time": 3.3333, "name": "Rleg_up" }
+				]
+			},
+			"body": {
+				"attachment": [
+					{ "name": "body" },
+					{ "time": 3.3333, "name": "body" }
+				]
+			},
+			"Rleg_down": {
+				"attachment": [
+					{ "name": "Rleg_down" },
+					{ "time": 3.3333, "name": "Rleg_down" }
+				]
+			},
+			"Larm_down": {
+				"attachment": [
+					{ "name": "Larm_down" },
+					{ "time": 3.3333, "name": "Larm_down" }
+				]
+			},
+			"Lleg_down": {
+				"attachment": [
+					{ "name": "Lleg_down" },
+					{ "time": 3.3333, "name": "Lleg_down" }
+				]
+			},
+			"Rarm_down": {
+				"attachment": [
+					{ "name": "Rarm_down" },
+					{ "time": 3.3333, "name": "Rarm_down" }
+				]
+			},
+			"head": {
+				"attachment": [
+					{ "name": "head" },
+					{ "time": 3.3333, "name": "head" }
+				]
+			},
+			"Larm_up": {
+				"attachment": [
+					{ "name": "Larm_up" },
+					{ "time": 3.3333, "name": "Larm_up" }
+				]
+			},
+			"cloack": {
+				"attachment": [
+					{ "name": "cloack" },
+					{ "time": 3.3333, "name": "cloack" }
+				]
+			}
+		}
+	}
+}
+}

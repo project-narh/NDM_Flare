@@ -1,0 +1,155 @@
+{
+"skeleton": {
+	"hash": "Spuu7KofcGY7OuqoNHto9rsilqM=",
+	"spine": "3.8.0",
+	"x": -372.67,
+	"y": -73.2,
+	"width": 1078.46,
+	"height": 932,
+	"images": "./images/",
+	"audio": "F:/2022NDM/Infectorgirl/ef"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "center point", "parent": "root", "y": 375.54 },
+	{ "name": "particles", "parent": "center point", "x": 100.9, "y": 18.72 },
+	{ "name": "spin_main", "parent": "center point", "length": 410.18, "x": 2.57, "y": -0.75, "color": "fffc00ff" },
+	{
+		"name": "spin_start",
+		"parent": "center point",
+		"length": 410.18,
+		"rotation": 90,
+		"x": 2.57,
+		"y": -0.75,
+		"color": "ff0000ff"
+	},
+	{
+		"name": "spin_end",
+		"parent": "center point",
+		"length": 410.18,
+		"rotation": -90,
+		"x": 2.57,
+		"y": -0.75,
+		"color": "0047ffff"
+	}
+],
+"slots": [
+	{ "name": "end3", "bone": "spin_end", "attachment": "end" },
+	{ "name": "main", "bone": "spin_main", "attachment": "main" },
+	{ "name": "start2", "bone": "spin_start", "attachment": "start" },
+	{ "name": "particles", "bone": "particles", "attachment": "particles" },
+	{ "name": "center point", "bone": "center point" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"center point": {
+				"center point": { "x": 0.33, "y": 0.26, "width": 16, "height": 16 }
+			},
+			"start2": {
+				"start": { "x": 71.51, "y": -11.77, "rotation": -90, "width": 774, "height": 767 }
+			},
+			"particles": {
+				"particles": { "x": 327.39, "y": 103.05, "width": 555, "height": 723 }
+			},
+			"end3": {
+				"end": { "x": 289.49, "y": -60.73, "rotation": 90, "width": 581, "height": 317 }
+			},
+			"main": {
+				"main": { "x": 39.27, "y": 4.01, "width": 823, "height": 900 }
+			}
+		}
+	}
+],
+"animations": {
+	"Effect": {
+		"slots": {
+			"particles": {
+				"color": [
+					{ "color": "ffffff00", "curve": 0.265, "c3": 0.618, "c4": 0.43 },
+					{ "time": 0.1667, "color": "ffffffff", "curve": 0.351, "c2": 0.4, "c3": 0.757 },
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"main": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"start2": {
+				"color": [
+					{ "color": "ffffff00", "curve": 0.258, "c3": 0.619, "c4": 0.45 },
+					{ "time": 0.1667, "color": "ffffffff", "curve": 0.363, "c2": 0.44, "c3": 0.755 },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"end3": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00", "curve": 0.243, "c3": 0.649, "c4": 0.6 },
+					{ "time": 0.3333, "color": "ffffff7d", "curve": 0, "c2": 1, "c3": 0.735 },
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"spin_start": {
+				"rotate": [
+					{ "angle": 62.31, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.1667, "angle": -15.59 }
+				],
+				"shear": [
+					{ "x": -1.2 }
+				]
+			},
+			"spin_main": {
+				"rotate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "angle": -18.29 }
+				]
+			},
+			"particles": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "x": 25.84 }
+				],
+				"scale": [
+					{ "time": 0.1667, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.082, "y": 1.082 }
+				]
+			},
+			"spin_end": {
+				"rotate": [
+					{ "curve": "stepped" },
+					{ "time": 0.1667, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "angle": -23.92 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.3333, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 0.93, "y": 0.93 }
+				]
+			},
+			"center point": {
+				"scale": [
+					{ "curve": 0.302, "c3": 0.638, "c4": 0.36 },
+					{
+						"time": 0.1667,
+						"x": 1.062,
+						"y": 1.062,
+						"curve": 0.298,
+						"c2": 0.2,
+						"c3": 0.64,
+						"c4": 0.56
+					},
+					{ "time": 0.5 }
+				]
+			}
+		}
+	},
+	"TEst": {}
+}
+}

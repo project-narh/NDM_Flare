@@ -1,0 +1,132 @@
+
+Infectorgirl.png
+size: 2006,705
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back arm 1
+  rotate: true
+  xy: 1563, 58
+  size: 104, 183
+  orig: 104, 183
+  offset: 0, 0
+  index: -1
+Back arm 2
+  rotate: true
+  xy: 1849, 20
+  size: 124, 136
+  orig: 124, 136
+  offset: 0, 0
+  index: -1
+Back arm hand
+  rotate: false
+  xy: 1748, 27
+  size: 99, 135
+  orig: 99, 135
+  offset: 0, 0
+  index: -1
+Back hair
+  rotate: false
+  xy: 2, 215
+  size: 515, 488
+  orig: 515, 488
+  offset: 0, 0
+  index: -1
+Back leg 1
+  rotate: true
+  xy: 260, 33
+  size: 180, 228
+  orig: 180, 228
+  offset: 0, 0
+  index: -1
+Back leg 2
+  rotate: false
+  xy: 1860, 146
+  size: 135, 287
+  orig: 135, 287
+  offset: 0, 0
+  index: -1
+Body bottom
+  rotate: false
+  xy: 1299, 2
+  size: 262, 160
+  orig: 262, 160
+  offset: 0, 0
+  index: -1
+Body top
+  rotate: true
+  xy: 1530, 164
+  size: 269, 328
+  orig: 269, 328
+  offset: 0, 0
+  index: -1
+Boob
+  rotate: false
+  xy: 1299, 164
+  size: 216, 141
+  orig: 216, 141
+  offset: 0, 0
+  index: -1
+Front leg 2
+  rotate: false
+  xy: 881, 59
+  size: 148, 285
+  orig: 148, 285
+  offset: 0, 0
+  index: -1
+Light
+  rotate: false
+  xy: 519, 346
+  size: 600, 357
+  orig: 600, 357
+  offset: 0, 0
+  index: -1
+Spore
+  rotate: false
+  xy: 1530, 435
+  size: 474, 268
+  orig: 474, 268
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 1563, 15
+  size: 165, 41
+  orig: 165, 41
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 30
+  size: 256, 183
+  orig: 256, 183
+  offset: 0, 0
+  index: -1
+front arm
+  rotate: true
+  xy: 1031, 36
+  size: 109, 233
+  orig: 109, 233
+  offset: 0, 0
+  index: -1
+front hair
+  rotate: true
+  xy: 1121, 307
+  size: 396, 407
+  orig: 396, 407
+  offset: 0, 0
+  index: -1
+front leg 1
+  rotate: true
+  xy: 1031, 147
+  size: 158, 266
+  orig: 158, 266
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 519, 11
+  size: 360, 333
+  orig: 360, 333
+  offset: 0, 0
+  index: -1
