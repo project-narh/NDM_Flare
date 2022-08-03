@@ -1,0 +1,111 @@
+
+CannonWoman.png
+size: 1537,813
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Larm1
+  rotate: false
+  xy: 950, 17
+  size: 220, 144
+  orig: 220, 144
+  offset: 0, 0
+  index: -1
+Larm2
+  rotate: false
+  xy: 476, 48
+  size: 187, 79
+  orig: 187, 79
+  offset: 0, 0
+  index: -1
+Lleg1
+  rotate: false
+  xy: 1214, 152
+  size: 160, 191
+  orig: 160, 191
+  offset: 0, 0
+  index: -1
+Lleg2
+  rotate: true
+  xy: 281, 36
+  size: 91, 193
+  orig: 91, 193
+  offset: 0, 0
+  index: -1
+Rarm1
+  rotate: true
+  xy: 950, 163
+  size: 180, 262
+  orig: 180, 262
+  offset: 0, 0
+  index: -1
+Rarm2
+  rotate: false
+  xy: 2, 20
+  size: 277, 107
+  orig: 277, 107
+  offset: 0, 0
+  index: -1
+Rleg1
+  rotate: false
+  xy: 1376, 471
+  size: 154, 340
+  orig: 154, 340
+  offset: 0, 0
+  index: -1
+Rleg2
+  rotate: false
+  xy: 1376, 248
+  size: 156, 221
+  orig: 156, 221
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 653, 132
+  size: 211, 295
+  orig: 211, 295
+  offset: 0, 0
+  index: -1
+cannon_ball
+  rotate: true
+  xy: 1376, 66
+  size: 180, 159
+  orig: 180, 159
+  offset: 0, 0
+  index: -1
+head_attack
+  rotate: false
+  xy: 2, 345
+  size: 456, 466
+  orig: 456, 466
+  offset: 0, 0
+  index: -1
+head_dead
+  rotate: false
+  xy: 460, 345
+  size: 456, 466
+  orig: 456, 466
+  offset: 0, 0
+  index: -1
+head_idle
+  rotate: false
+  xy: 918, 345
+  size: 456, 466
+  orig: 456, 466
+  offset: 0, 0
+  index: -1
+underbody
+  rotate: false
+  xy: 1172, 2
+  size: 191, 148
+  orig: 191, 148
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 2, 129
+  size: 649, 214
+  orig: 649, 214
+  offset: 0, 0
+  index: -1

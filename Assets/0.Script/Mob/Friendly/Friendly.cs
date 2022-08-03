@@ -14,7 +14,8 @@ public class Friendly : Mob
     {
         Init();
         ai = GetComponent<Mob_AI>();
-        ai.Init(this, "E_Core"); //AI 정보 전달
+        if(!is_neutrlity)
+            Send_AI(); //AI 정보 전달
     }
 
     public override void Attack()
@@ -31,5 +32,10 @@ public class Friendly : Mob
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+    }
+
+    public override void Send_AI()
+    {
+        ai.Init(this, "E_Core");
     }
 }

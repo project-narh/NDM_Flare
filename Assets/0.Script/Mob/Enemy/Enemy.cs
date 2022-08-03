@@ -14,7 +14,8 @@ public class Enemy : Mob
     {
         Init();
         ai = GetComponent<Mob_AI>();
-        ai.Init(this, "F_Core"); //AI 정보 전달
+        if (!is_neutrlity)
+            Send_AI();//AI 정보 전달
     }
 
 
@@ -26,5 +27,10 @@ public class Enemy : Mob
     public override void Dead()
     {
         base.Dead();
+    }
+
+    public override void Send_AI()
+    {
+        ai.Init(this, "F_Core");
     }
 }

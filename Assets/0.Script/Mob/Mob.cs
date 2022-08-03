@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum Team { Enemy, Friend }
-
 public class Mob : MonoBehaviour
 {
     [SerializeField] Mob_Stat stat;
@@ -18,6 +16,7 @@ public class Mob : MonoBehaviour
     protected Mob_AI ai;
     protected Pooling pool;
     protected bool is_wait = false;
+    [SerializeField] protected bool is_neutrlity = false;
     protected IEnumerator coroutine;
 
     protected virtual void Init()
@@ -32,7 +31,7 @@ public class Mob : MonoBehaviour
         HP = stat.Max_HP;
     }
 
-    protected void Set_Tags(string tag)
+    public void Set_Tags(string tag)
     {
         gameObject.tag = tag;
         transform.GetChild(0).tag = tag + "_Range";
@@ -125,5 +124,9 @@ public class Mob : MonoBehaviour
     public void Pooling()
     {
         pool.Disabled(this.gameObject);
+    }
+
+    public virtual void Send_AI()
+    {
     }
 }

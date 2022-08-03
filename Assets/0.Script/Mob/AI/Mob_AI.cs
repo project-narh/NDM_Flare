@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public enum AI_State
 {
-    wait, move, Attack, dead, win, Attack_Wait
+    wait, move, Attack, dead, win, System_wait
 }
 
 public class Mob_AI : MonoBehaviour
@@ -24,6 +24,7 @@ public class Mob_AI : MonoBehaviour
     Vector3 dir;
     string ani;
     bool is_dead = false;
+    bool is_System = false;
 
     private void Awake()
     {
@@ -80,36 +81,56 @@ public class Mob_AI : MonoBehaviour
     {
         if (!is_dead)
         {
-            switch (state)
+            if (!is_System)
             {
-                case AI_State.wait:
-                    animator.SetBool("Move", false);
-                    animator.SetBool("Attack", false);
-                    break;
-                case AI_State.move:
-                    animator.SetBool("Move", true);
-                    animator.SetBool("Attack", false);
-                    if (coroutine != null)
-                    {
-                        StopCoroutine(coroutine);
-                        coroutine = null;
-                        mob.Attack_cancel();
-                    }
-                    break;
-                case AI_State.Attack:
-                    animator.SetBool("Attack", true);
-                    animator.SetBool("Move", false);
-                    coroutine = Attack_End();
-                    StartCoroutine(coroutine);
-                    break;
-                case AI_State.dead:
-                    StartCoroutine(Dead_Ainmation());
-                    break;
-                case AI_State.win:
-                    break;
+                switch (state)
+                {
+                    case AI_State.System_wait:
+                        is_System = true;
+                        animator.SetBool("Move", false);
+                        animator.SetBool("Attack", false);
+                        break;
+
+                    case AI_State.wait:
+                        animator.SetBool("Move", false);
+                        animator.SetBool("Attack", false);
+                        break;
+                    case AI_State.move:
+                        animator.SetBool("Move", true);
+                        animator.SetBool("Attack", false);
+                        if (coroutine != null)
+                        {
+                            StopCoroutine(coroutine);
+                            coroutine = null;
+                            mob.Attack_cancel();
+                        }
+                        break;
+                    case AI_State.Attack:
+                        animator.SetBool("Attack", true);
+                        animator.SetBool("Move", false);
+                        coroutine = Attack_End();
+                        StartCoroutine(coroutine);
+                        break;
+                    case AI_State.dead:
+                        StartCoroutine(Dead_Ainmation());
+                        break;
+                    case AI_State.win:
+                        break;
+                }
             }
         }
         this.state = state;
+    }
+
+    public void Set_State(bool system)
+    {
+        if (system)
+        {
+            Set_State(AI_State.System_wait);
+            return;
+        }
+        is_System = false;
+        Set_State(AI_State.move);
     }
 
     public void Set_Target(Transform t)
