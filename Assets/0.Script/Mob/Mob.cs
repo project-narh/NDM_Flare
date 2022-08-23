@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public delegate void List_Counter(Mob mob);
+
 public class Mob : MonoBehaviour
 {
     [SerializeField] Mob_Stat stat;
@@ -12,12 +14,12 @@ public class Mob : MonoBehaviour
         [field: SerializeField] protected float Atteck_cooltime { get; set; }
         [field: SerializeField] protected float Atteck_Damage { get; set; }
         [field: SerializeField] public float Speed { get; protected set; }*/
-
     protected Mob_AI ai;
     protected Pooling pool;
     protected bool is_wait = false;
     [SerializeField] protected bool is_neutrlity = false;
     protected IEnumerator coroutine;
+    protected Core core;
 
     protected virtual void Init()
     {
@@ -61,6 +63,11 @@ public class Mob : MonoBehaviour
         }
     }
 
+    public bool Get_neutrlity()
+    {
+        return is_neutrlity;
+    }
+
     public float Get_Speed()
     {
         return stat.Speed;
@@ -73,7 +80,7 @@ public class Mob : MonoBehaviour
     public void AddDamage(float damage) //상대방 공격을 받았을 때
     {
         HP -= damage;
-        Debug.Log("[Enemy] HP : " + HP);
+        Debug.Log("데미지 : " + damage + " HP : " + HP);
         if (HP <= 0)
         {
             Dead();
@@ -126,7 +133,15 @@ public class Mob : MonoBehaviour
         pool.Disabled(this.gameObject);
     }
 
-    public virtual void Send_AI()
+    public void Debuff(DeBuff debuff)
     {
+        Debug.Log("디버프");
+        ai.Set_Debuff(debuff);
     }
+
+    public string Get_name()
+    {
+        return stat.name;
+    }
+
 }

@@ -20,8 +20,12 @@ public class Player_Attack : P_Finder
             {
                 if (check_body(col.gameObject))
                 {
-                    Mob enemy = col.GetComponent<Mob>();
-                    enemy.AddDamage(player.Get_Damage());
+                    if (!col.gameObject.name.Equals("Range"))
+                    {
+                        Mob enemy = col.GetComponent<Mob>();
+                        enemy.AddDamage(player.Get_Damage());
+                        //Debug.Log(player.Get_Damage() + "µ¥¹ÌÁö");
+                    }
 
                 }
             }

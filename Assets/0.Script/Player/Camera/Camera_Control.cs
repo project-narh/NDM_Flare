@@ -8,8 +8,10 @@ public class Camera_Control : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private SpriteRenderer map;
     [SerializeField] private float p;
+    [SerializeField] private float num;
     Vector3 pos;
     float min, max;
+    bool is_skill = false;
 
 
     private void Start()
@@ -24,7 +26,12 @@ public class Camera_Control : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move_Camera();
+        if(!is_skill)
+            Move_Camera();
+        else
+        {
+            Mob_Storage.Instance.Remove_a();
+        }
     }
 
     private void Check_map()
@@ -41,7 +48,26 @@ public class Camera_Control : MonoBehaviour
     private void Move_Camera()
     {
         transform.position = Vector3.Lerp(transform.position, player.position + pos, Speed * Time.deltaTime);
-        float limit = Mathf.Clamp(transform.position.x, min, max);
+        float limit = Mathf.Clamp(transform.position.x, min+num, max+num);
         transform.position = new Vector3(limit, p, -10);
     }
+
+    public void Use_skill()
+    {
+        is_skill = true;
+    }
+
+/*    IEnumerator Shake(float timer, float range)
+    {
+        Vector3 vector = Camera.main.transform.position;
+        float t = 0;
+        while (t < timer)
+        {
+            Camera.main.transform.localPosition = Random.insideUnitSphere * range + vector;
+            t += Time.deltaTime;
+
+            yield return null;
+        }
+        Camera.main.transform.localPosition = vector;
+    }*/
 }

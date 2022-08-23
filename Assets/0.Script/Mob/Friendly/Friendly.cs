@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Friendly : Mob
 {
+    public List_Counter counter_f;
     protected override void Init() // 초기화
     {
         base.Init();
@@ -13,9 +14,11 @@ public class Friendly : Mob
     private void Start()
     {
         Init();
+        core = GameObject.FindWithTag("F_Core").GetComponent<Core>();
         ai = GetComponent<Mob_AI>();
-        if(!is_neutrlity)
-            Send_AI(); //AI 정보 전달
+        //if(!is_neutrlity)
+        //Send_AI(); //AI 정보 전달
+        ai.Init(this, "E_Core");
     }
 
     public override void Attack()
@@ -27,6 +30,7 @@ public class Friendly : Mob
     public override void Dead()
     {
         base.Dead();
+        Mob_Storage.Instance.Remove_Mob(this,true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,8 +38,8 @@ public class Friendly : Mob
 
     }
 
-    public override void Send_AI()
+/*    public override void Send_AI()
     {
         ai.Init(this, "E_Core");
-    }
+    }*/
 }

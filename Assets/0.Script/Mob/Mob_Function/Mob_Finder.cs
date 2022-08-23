@@ -10,11 +10,32 @@ public class Mob_Finder : Finder
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (check_Enemy(col.gameObject) || Check_Core(col.gameObject))//적을 발견
-        {
+        //if (check_Enemy(col.gameObject) || Check_Core(col.gameObject))//적을 발견
+        if (check_Enemy(col.gameObject))
+            {
             list.Add(col.gameObject);
             if (ai.state != AI_State.Attack)
                 ai.Set_State(AI_State.Attack);
+            ai.is_find = true;
+
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (!ai.is_find)
+        {
+            if (check_Enemy(col.gameObject))
+            {
+                if (ai.state != AI_State.System_wait)
+                {
+                    if (ai.state != AI_State.Attack)
+                    {
+                        ai.Set_State(AI_State.Attack);
+                        ai.is_find = true;
+                    }
+                }
+            }
         }
     }
 
@@ -31,12 +52,15 @@ public class Mob_Finder : Finder
         if(!check_mob())
         {
             if (ai.state != AI_State.move)
+            {
                 ai.Set_State(AI_State.move);
+                ai.is_find = false;
+            }
         }
         else
         {
-            if (ai.state != AI_State.Attack)
-                ai.Set_State(AI_State.Attack);
+/*            if (ai.state != AI_State.Attack)
+                ai.Set_State(AI_State.Attack);*/
         }
     }
 

@@ -1,0 +1,118 @@
+
+Meogun.png
+size: 1989,1821
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bcloack
+  rotate: false
+  xy: 1427, 249
+  size: 560, 269
+  orig: 560, 269
+  offset: 0, 0
+  index: -1
+Larm_down
+  rotate: false
+  xy: 1452, 1037
+  size: 220, 312
+  orig: 220, 312
+  offset: 0, 0
+  index: -1
+Larm_up
+  rotate: true
+  xy: 964, 408
+  size: 217, 408
+  orig: 217, 408
+  offset: 0, 0
+  index: -1
+Lleg_down
+  rotate: false
+  xy: 1760, 1227
+  size: 201, 392
+  orig: 201, 392
+  offset: 0, 0
+  index: -1
+Lleg_up
+  rotate: true
+  xy: 964, 627
+  size: 230, 406
+  orig: 230, 406
+  offset: 0, 0
+  index: -1
+Rarm_down
+  rotate: false
+  xy: 1803, 899
+  size: 160, 326
+  orig: 160, 326
+  offset: 0, 0
+  index: -1
+Rarm_up
+  rotate: true
+  xy: 1427, 2
+  size: 245, 456
+  orig: 245, 456
+  offset: 0, 0
+  index: -1
+Rleg_down
+  rotate: true
+  xy: 964, 197
+  size: 209, 400
+  orig: 209, 400
+  offset: 0, 0
+  index: -1
+Rleg_up
+  rotate: true
+  xy: 1452, 1621
+  size: 198, 418
+  orig: 198, 418
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 1427, 520
+  size: 337, 549
+  orig: 337, 549
+  offset: 0, 0
+  index: -1
+cloack
+  rotate: false
+  xy: 1452, 863
+  size: 349, 172
+  orig: 349, 172
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 859
+  size: 723, 960
+  orig: 723, 960
+  offset: 0, 0
+  index: -1
+head_attack
+  rotate: true
+  xy: 2, 134
+  size: 723, 960
+  orig: 723, 960
+  offset: 0, 0
+  index: -1
+head_dead
+  rotate: false
+  xy: 727, 859
+  size: 723, 960
+  orig: 723, 960
+  offset: 0, 0
+  index: -1
+underbody
+  rotate: false
+  xy: 1452, 1351
+  size: 306, 268
+  orig: 306, 268
+  offset: 0, 0
+  index: -1
+wea
+  rotate: false
+  xy: 2, 13
+  size: 1423, 119
+  orig: 1423, 119
+  offset: 0, 0
+  index: -1

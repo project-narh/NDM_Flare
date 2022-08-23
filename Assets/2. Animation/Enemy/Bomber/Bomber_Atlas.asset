@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c947f0c30df57a44f887e2d5bc8c56c7, type: 3}
-  m_Name: Sield
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Bomber_Atlas
   m_EditorClassIdentifier: 
-  <Max_HP>k__BackingField: 150
-  <HP>k__BackingField: 0
-  <Spawn_Cooltime>k__BackingField: 1
-  <Attack_Cooltime>k__BackingField: 5
-  <Attack_Damage>k__BackingField: 10
-  <Speed>k__BackingField: 1
+  atlasFile: {fileID: 4900000, guid: 39c09fe99bf7d594789b9b5253a723b6, type: 3}
+  materials:
+  - {fileID: 2100000, guid: b11ac5cb515329e41aa4123ae3b61eb6, type: 2}

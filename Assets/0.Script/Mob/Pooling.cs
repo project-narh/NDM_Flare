@@ -34,7 +34,7 @@ public class Pooling : MonoBehaviour
         return o;
     }
 
-    public void Active(Vector3 transform)
+    public GameObject Active(Vector3 transform)
     {
         GameObject pool;
         if(queue.Count > 0)
@@ -46,12 +46,13 @@ public class Pooling : MonoBehaviour
         pool.GetComponent<SortingGroup>().sortingOrder = extraction(transform.y);
         pool.GetComponent<Mob>().Set_Pool(this);
         pool.SetActive(true);
+        return pool;
     }
 
     public void Disabled(GameObject obj)
     {
-        obj.SetActive(false);
         obj.transform.position = Vector3.zero;
+        obj.SetActive(false);
         queue.Enqueue(obj);
     }
 
@@ -61,16 +62,17 @@ public class Pooling : MonoBehaviour
        for(int i = 0; i < mob.Length; i++)
        {
             Disabled(mob[i].gameObject);
-            Debug.Log("삭제 ; " + i);
+            //Debug.Log("삭제 ; " + i);
        }
     }
 
     private int extraction(float num)
     {
-        float m = (-num) * 10;
-        Debug.Log(m);
+        //float m = (-num) * 10;
+        float m = -((num + 10) * 10);
+        //Debug.Log(m);
 
-        Debug.Log("원래 값 : " + num + "            변경 값 : " +(int)m );
+        //Debug.Log("원래 값 : " + num + "            변경 값 : " +(int)m );
         return (int)m;
     }
 

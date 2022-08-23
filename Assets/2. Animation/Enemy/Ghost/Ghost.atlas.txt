@@ -1,0 +1,132 @@
+
+Ghost.png
+size: 4096,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_back 1
+  rotate: false
+  xy: 1655, 8
+  size: 102, 216
+  orig: 102, 216
+  offset: 0, 0
+  index: -1
+Arm_back 2
+  rotate: true
+  xy: 1488, 23
+  size: 182, 165
+  orig: 182, 165
+  offset: 0, 0
+  index: -1
+Arm_back 3
+  rotate: true
+  xy: 1759, 72
+  size: 156, 277
+  orig: 156, 277
+  offset: 0, 0
+  index: -1
+Arm_front 1
+  rotate: false
+  xy: 1370, 6
+  size: 116, 199
+  orig: 116, 199
+  offset: 0, 0
+  index: -1
+Arm_front 2
+  rotate: false
+  xy: 1957, 361
+  size: 136, 146
+  orig: 136, 146
+  offset: 0, 0
+  index: -1
+Arm_front 3
+  rotate: true
+  xy: 829, 2
+  size: 171, 303
+  orig: 171, 303
+  offset: 0, 0
+  index: -1
+Effect_Ghost_Fireball
+  rotate: false
+  xy: 1295, 207
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+body_bot
+  rotate: true
+  xy: 829, 175
+  size: 332, 218
+  orig: 332, 218
+  offset: 0, 0
+  index: -1
+body_top
+  rotate: true
+  xy: 1049, 195
+  size: 312, 244
+  orig: 312, 244
+  offset: 0, 0
+  index: -1
+butt
+  rotate: false
+  xy: 485, 94
+  size: 342, 413
+  orig: 342, 413
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 2070, 240
+  size: 119, 101
+  orig: 119, 101
+  offset: 0, 0
+  index: -1
+eye2
+  rotate: false
+  xy: 485, 23
+  size: 185, 69
+  orig: 185, 69
+  offset: 0, 0
+  index: -1
+fire
+  rotate: true
+  xy: 1134, 9
+  size: 184, 234
+  orig: 184, 234
+  offset: 0, 0
+  index: -1
+fire2
+  rotate: false
+  xy: 2038, 97
+  size: 133, 133
+  orig: 133, 133
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 4
+  size: 481, 503
+  orig: 481, 503
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 1745, 230
+  size: 277, 210
+  orig: 277, 210
+  offset: 0, 0
+  index: -1
+tail
+  rotate: true
+  xy: 1597, 226
+  size: 281, 146
+  orig: 281, 146
+  offset: 0, 0
+  index: -1
+tongue
+  rotate: false
+  xy: 1957, 232
+  size: 111, 127
+  orig: 111, 127
+  offset: 0, 0
+  index: -1

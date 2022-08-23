@@ -1,0 +1,83 @@
+
+Gollem_Ally.png
+size: 2030,1351
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Larm1
+  rotate: true
+  xy: 881, 932
+  size: 417, 621
+  orig: 417, 621
+  offset: 0, 0
+  index: -1
+Larm2
+  rotate: true
+  xy: 1467, 411
+  size: 460, 522
+  orig: 460, 522
+  offset: 0, 0
+  index: -1
+Larm3
+  rotate: false
+  xy: 1373, 2
+  size: 447, 407
+  orig: 447, 407
+  offset: 0, 0
+  index: -1
+Lleg1
+  rotate: false
+  xy: 222, 39
+  size: 228, 263
+  orig: 228, 263
+  offset: 0, 0
+  index: -1
+Lleg2
+  rotate: false
+  xy: 622, 60
+  size: 147, 242
+  orig: 147, 242
+  offset: 0, 0
+  index: -1
+Rarm1
+  rotate: true
+  xy: 881, 496
+  size: 434, 584
+  orig: 434, 584
+  offset: 0, 0
+  index: -1
+Rarm2
+  rotate: true
+  xy: 1504, 873
+  size: 476, 524
+  orig: 476, 524
+  offset: 0, 0
+  index: -1
+Rarm3
+  rotate: false
+  xy: 881, 2
+  size: 490, 492
+  orig: 490, 492
+  offset: 0, 0
+  index: -1
+Rleg1
+  rotate: false
+  xy: 2, 36
+  size: 218, 266
+  orig: 218, 266
+  offset: 0, 0
+  index: -1
+Rleg2
+  rotate: false
+  xy: 452, 57
+  size: 168, 245
+  orig: 168, 245
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 304
+  size: 877, 1045
+  orig: 877, 1045
+  offset: 0, 0
+  index: -1

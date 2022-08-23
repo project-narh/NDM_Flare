@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Testing : MonoBehaviour
 {
@@ -17,6 +18,18 @@ public class Testing : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Set_panel();
+        }
+        else if(Input.GetKeyDown(KeyCode.Z))
+        {
+            SceneManager.LoadScene("Stage1");
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            SceneManager.LoadScene("Stage2");
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            SceneManager.LoadScene("Stage3");
         }
 
     }

@@ -332,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: c1bac6e20ca58b24a98de77f6678edca, type: 2}
   <HP>k__BackingField: 0
+  is_neutrlity: 0
 --- !u!114 &7553788628913463447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +348,9 @@ MonoBehaviour:
   state: 0
   time: 0.2
   Dead_Timer: 1
+  cool: {fileID: 11400000, guid: ab6b13d773b0e824898d8bdce1f1b59e, type: 2}
   SkeletonMecanim: {fileID: 7553788628913465195}
+  sfx_timer: 0.31
 --- !u!33 &7553788628913463446
 MeshFilter:
   m_ObjectHideFlags: 0

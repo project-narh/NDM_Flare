@@ -1,0 +1,173 @@
+
+Nightmare.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body back
+  rotate: true
+  xy: 2941, 868
+  size: 1644, 1097
+  orig: 1644, 1097
+  offset: 0, 0
+  index: -1
+body main
+  rotate: false
+  xy: 1452, 1447
+  size: 1487, 1065
+  orig: 1487, 1065
+  offset: 0, 0
+  index: -1
+body tail
+  rotate: true
+  xy: 2489, 2514
+  size: 642, 877
+  orig: 642, 877
+  offset: 0, 0
+  index: -1
+center
+  rotate: false
+  xy: 2, 3484
+  size: 22, 22
+  orig: 22, 22
+  offset: 0, 0
+  index: -1
+cloak
+  rotate: false
+  xy: 1402, 2597
+  size: 1085, 573
+  orig: 1085, 573
+  offset: 0, 0
+  index: -1
+dark ball
+  rotate: true
+  xy: 1949, 3234
+  size: 272, 286
+  orig: 272, 286
+  offset: 0, 0
+  index: -1
+eye
+  rotate: true
+  xy: 26, 3448
+  size: 58, 75
+  orig: 58, 75
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 3068, 3158
+  size: 348, 375
+  orig: 348, 375
+  offset: 0, 0
+  index: -1
+ground effect
+  rotate: false
+  xy: 2, 2861
+  size: 1398, 436
+  orig: 1398, 436
+  offset: 0, 0
+  index: -1
+hand bot 1
+  rotate: false
+  xy: 1236, 3299
+  size: 255, 207
+  orig: 255, 207
+  offset: 0, 0
+  index: -1
+hand bot tail
+  rotate: true
+  xy: 2237, 3172
+  size: 334, 427
+  orig: 334, 427
+  offset: 0, 0
+  index: -1
+hand top 1
+  rotate: true
+  xy: 1030, 3308
+  size: 198, 204
+  orig: 198, 204
+  offset: 0, 0
+  index: -1
+hand top 2
+  rotate: true
+  xy: 752, 3316
+  size: 190, 276
+  orig: 190, 276
+  offset: 0, 0
+  index: -1
+hand top tail
+  rotate: true
+  xy: 2666, 3168
+  size: 338, 400
+  orig: 338, 400
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 3445, 2830
+  size: 676, 636
+  orig: 676, 636
+  offset: 0, 0
+  index: -1
+horn back
+  rotate: true
+  xy: 318, 3349
+  size: 157, 265
+  orig: 157, 265
+  offset: 0, 0
+  index: -1
+horn front
+  rotate: true
+  xy: 1493, 3270
+  size: 236, 454
+  orig: 236, 454
+  offset: 0, 0
+  index: -1
+horn front root
+  rotate: false
+  xy: 585, 3346
+  size: 165, 160
+  orig: 165, 160
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 103, 3397
+  size: 213, 109
+  orig: 213, 109
+  offset: 0, 0
+  index: -1
+particle
+  rotate: true
+  xy: 2, 1835
+  size: 760, 1448
+  orig: 760, 1448
+  offset: 0, 0
+  index: -1
+scythe
+  rotate: true
+  xy: 2, 2
+  size: 1443, 2213
+  orig: 1443, 2213
+  offset: 0, 0
+  index: -1
+
+Nightmare2.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Slash effect end
+  rotate: false
+  xy: 1863, 80
+  size: 1757, 2144
+  orig: 1757, 2144
+  offset: 0, 0
+  index: -1
+Slash effect main
+  rotate: false
+  xy: 2, 2
+  size: 1859, 2222
+  orig: 1859, 2222
+  offset: 0, 0
+  index: -1

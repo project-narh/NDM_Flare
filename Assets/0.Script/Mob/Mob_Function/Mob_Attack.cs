@@ -12,6 +12,7 @@ public class Mob_Attack : Finder
             {
                 if (check_body(col.gameObject))
                 {
+  
                     Mob enemy = col.gameObject.GetComponent<Mob>();
                     if (enemy == null)
                     {

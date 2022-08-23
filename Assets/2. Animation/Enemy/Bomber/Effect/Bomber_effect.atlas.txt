@@ -1,0 +1,62 @@
+
+Bomber_effect.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01 Flash
+  rotate: false
+  xy: 1222, 204
+  size: 1027, 1110
+  orig: 1027, 1110
+  offset: 0, 0
+  index: -1
+02 Bubble
+  rotate: false
+  xy: 2, 1316
+  size: 1336, 1336
+  orig: 1336, 1336
+  offset: 0, 0
+  index: -1
+02 Flash
+  rotate: true
+  xy: 1430, 3092
+  size: 459, 403
+  orig: 459, 403
+  offset: 0, 0
+  index: -1
+02Bbubble 2
+  rotate: false
+  xy: 2, 2654
+  size: 1426, 1426
+  orig: 1426, 1426
+  offset: 0, 0
+  index: -1
+03 Cloud
+  rotate: false
+  xy: 1340, 1567
+  size: 866, 1085
+  orig: 866, 1085
+  offset: 0, 0
+  index: -1
+03 Cloud Fire
+  rotate: false
+  xy: 1430, 3553
+  size: 327, 527
+  orig: 327, 527
+  offset: 0, 0
+  index: -1
+03 Flash
+  rotate: true
+  xy: 2, 2
+  size: 1312, 944
+  orig: 1312, 944
+  offset: 0, 0
+  index: -1
+04 Ash
+  rotate: true
+  xy: 948, 193
+  size: 1121, 272
+  orig: 1121, 272
+  offset: 0, 0
+  index: -1

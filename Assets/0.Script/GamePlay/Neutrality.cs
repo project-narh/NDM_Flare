@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Neutrality : MonoBehaviour
 {
-    [SerializeField] private GameObject prefeb;
+    //[SerializeField] private GameObject prefeb_t;
+    //[SerializeField] private GameObject prefeb_e;
     [Range(0.1f, 0.8f)]
-    [SerializeField] private float ratio;
+    [SerializeField] public float ratio;
     private Core Enemy, Team;
     private bool is_use = false;
     private string tag = "";
@@ -48,15 +49,16 @@ public class Neutrality : MonoBehaviour
 
     private void Spawn(Core c)
     {
-        Mob mob = Instantiate(prefeb,c.transform.position,Quaternion.identity).GetComponent<Mob>();
-        mob.Set_Tags(tag);
+        //Mob mob = Instantiate(prefeb,c.transform.position,Quaternion.identity).GetComponent<Mob>();
+        c.Spawn_Gollem();
+        //mob.Set_Tags(tag);
         if(tag.Equals("Enemy"))
         {
-            Vector3 size = mob.transform.localScale;
-            size.Set(-size.x, -size.y, -size.z);
-            mob.transform.localScale = size;
+            //Vector3 size = mob.transform.localScale;
+            //size.Set(-size.x, -size.y, -size.z);
+            //mob.transform.localScale = size;
         }
 
-        mob.Send_AI();
+        //mob.Send_AI();
     }
 }

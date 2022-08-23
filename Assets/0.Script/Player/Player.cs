@@ -2,26 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Player_state
+{
+    None, skill1, skill2, skill3, ultimate, skill3_move
+}
+
+[System.Serializable]
+public struct Skill
+{
+    [field: SerializeField] public Player_state state { get; set; }
+    [field: SerializeField] public bool _iswait { get; set; }
+    [field: SerializeField] public float Cooltime { get; private set; }
+    [field: SerializeField] public float Damage { get; set; }
+
+}
+
 public class Player : MonoBehaviour
 {
     [SerializeField] private float Money = 0;
     [SerializeField] private float Energy = 0;
     [SerializeField] private float HP;
     [field: SerializeField] public float MAX_HP { get; private set; }
-    [field: SerializeField] public float Attack_Damage { get; private set; }
-    [field: SerializeField] public float Attack_Cooltime { get; private set; }
+
+    [SerializeField] public Skill[] skill;
     [field: SerializeField] public float Speed { get; private set; }
     [SerializeField] private float limit_dir;
+    [Header("스킬 공격력")]
     [SerializeField] private SpriteRenderer sprite;
     private Animator animator;
     private Rigidbody2D body;
     float dir;
     float v;
     private bool is_check = false , is_wait = false, is_dead = false;
+    private int _isAttack = 0;
+    private Player_state state = Player_state.None;
     private int num = 0;
     float width;
     float Timer = 0;
     private List<GameObject> list;
+    private Animator effect;
+    public bool use = false;
 
     private void Awake()
     {
@@ -32,6 +52,7 @@ public class Player : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        effect = transform.GetChild(2).GetComponent<Animator>();
         Init();
     }
 
@@ -43,44 +64,70 @@ public class Player : MonoBehaviour
         dir = 0;
         v = 0;
         HP = MAX_HP;
+        effect.gameObject.SetActive(false);
     }
 
     public bool Is_Attack()
     {
-        return animator.GetBool("Attack");
+        //return animator.GetBool("Attack");
+        if(!(state == Player_state.None || state == Player_state.skill3_move)) return true;
+        return false;
+
     }
 
     public void AddDamage(float Damage)
     {
-        HP -= Damage;
-        if(HP <= 0)
+        if (state != Player_state.skill3_move)
         {
-            Dead();
+            HP -= Damage;
+            if (HP <= 0)
+            {
+                Dead();
+            }
         }
     }
 
     private void Update()
     {
-        if(GameManager.Instance.is_Game)
+        if(GameManager.Instance == null)
         {
             Resource_Update();
             Move_Update();
             Attack_Update();
         }
+        else if(GameManager.Instance.is_Game)
+        {
+            Resource_Update();
+            Move_Update();
+            Attack_Update();
+        }
+        //Debug.Log(state);
     }
 
-    public void Set(float MAX_HP, float Attack_Damage, float Attack_Cooltime, float Speed)
+    public void Set(float MAX_HP, float Speed, float skill1, float skill2)
     {
         this.MAX_HP = MAX_HP;
         this.HP = MAX_HP;
-        this.Attack_Damage = Attack_Damage;
-        this.Attack_Cooltime = Attack_Cooltime;
         this.Speed = Speed;
+        this.skill[0].Damage = skill1;
+        this.skill[1].Damage = skill2;
     }
 
     private void FixedUpdate()
     {
-         body.velocity = new Vector2(v * Speed, body.velocity.y);
+        if (!Is_Attack())
+        {
+            body.velocity = new Vector2(v * Speed, body.velocity.y);
+        }
+        else
+        {
+            body.velocity = new Vector2(0, body.velocity.y);
+        }
+
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        if (pos.x < 0f) pos.x = 0f;
+        else if (pos.x > 1f) pos.x = 1f;
+        transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 
     private bool check_mob()
@@ -129,7 +176,7 @@ public class Player : MonoBehaviour
 
         is_check = check_mob();
 
-        if (!animator.GetBool("Attack"))
+        if (!Is_Attack())
         {
             v = Input.GetAxis("Horizontal");
             if (v < 0 && dir != -1) // 왼쪽
@@ -169,22 +216,67 @@ public class Player : MonoBehaviour
 
     private void Attack_Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Attack();
-        }
     }
 
-    public bool Attack()
+    public bool Attack(Player_state ps)
     {
-        if (!is_wait)
+        if (!Is_Attack())
         {
-            if (Resource_Check(ref Energy, 15))
+            v = 0;
+            switch (ps)
             {
-                animator.SetBool("Attack",true);
-                animator.SetBool("Move", false);
-                StartCoroutine(Attack_check());
-                return true;
+                case Player_state.skill1:
+                    if (Resource_Check(ref Energy, 10))
+                    {
+                        //animator.SetTrigger("skill1");
+                        state = ps;
+                        animator.SetBool("skill1", true);
+                        animator.SetBool("Move", false);
+                        SoundManager.Instance.play_sfx("Player_Skill1",0.2f);
+                        StartCoroutine(Attack_check());
+                        return true;
+                    }
+                    break;
+
+                case Player_state.skill2:
+                    if (Resource_Check(ref Energy, 20))
+                    {
+                        state = ps;
+                        //animator.SetTrigger("skill2");
+                        animator.SetBool("skill2", true);
+                        animator.SetBool("Move", false);
+                        SoundManager.Instance.play_sfx("Player_Skill2", 0.35f);
+                        StartCoroutine(Attack_check());
+                        return true;
+                    }
+                    break;
+
+                case Player_state.skill3:
+                    if (Resource_Check(ref Energy, 30))
+                    {
+                        state = ps;
+                        animator.SetTrigger("skill3");
+                        //animator.SetBool("skill3", true);
+
+                        animator.SetBool("Move", false);
+                        SoundManager.Instance.play_sfx("Player_Skill3");
+                        StartCoroutine(Attack_check());
+                        return true;
+                    }
+                    break;
+
+                case Player_state.ultimate:
+                    if (Resource_Check(ref Energy, 50))
+                    {
+                        state = ps;
+                        //animator.SetTrigger("ultimate");
+                        animator.SetBool("ultimate", true);
+                        animator.SetBool("Move", false);
+                        SoundManager.Instance.play_sfx("Player_Skill4");
+                        StartCoroutine(Attack_check());
+                        return true;
+                    }
+                    break;
             }
         }
         return false;
@@ -192,6 +284,7 @@ public class Player : MonoBehaviour
 
     public void Dead()
     {
+        SoundManager.Instance.play_sfx("Player_Death");
         animator.SetTrigger("Death");
         GameManager.Instance.is_Game = false;
         GameManager.Instance.GameOver();
@@ -200,7 +293,14 @@ public class Player : MonoBehaviour
 
     public float Get_Damage()
     {
-        return Attack_Damage;
+        for(int i = 0; i < skill.Length;i++)
+        {
+            if (skill[i].state == state)
+            {
+                return skill[i].Damage;
+            }
+        }
+        return 0;
     }
 
 
@@ -226,18 +326,68 @@ public class Player : MonoBehaviour
 
     IEnumerator Attack_check()
     {
+        use = true;
         is_wait = true;
-        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("ani_meogun_basic_skill1")){ yield return null; }
-        while(animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+        string str = "ani_meogun_basic_" + state.ToString();
+        Debug.Log(str);
+        if (state != Player_state.skill3)
         {
-            yield return null;
+            while (!animator.GetCurrentAnimatorStateInfo(0).IsName(str))
+            {
+                yield return null;
+            }
+            while (animator.GetCurrentAnimatorStateInfo(0).IsName(str) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+            {
+                yield return null;
+            }
         }
-        if (Input.GetAxis("Horizontal") != 0)
+        else
         {
-            animator.SetBool("Move", true);
+            while (!animator.GetCurrentAnimatorStateInfo(0).IsName(str))
+            {
+                yield return null;
+            }
+            while (animator.GetCurrentAnimatorStateInfo(0).IsName(str) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+            {
+                if(animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.5f)
+                {
+                    effect.gameObject.SetActive(true);
+                    effect.Play("PowerOverwhelming", -1, 0f);
+                    state = Player_state.skill3_move;
+                    break;
+                }
+                yield return null;
+            }
+            string str2 = "PowerOverwhelming";
+            while (!effect.GetCurrentAnimatorStateInfo(0).IsName(str2))
+            {
+                yield return null;
+            }
+            while (effect.GetCurrentAnimatorStateInfo(0).IsName(str2) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+            {
+                yield return null;
+            }
+            effect.gameObject.SetActive(false);
         }
-        animator.SetBool("Attack", false);
-        yield return new WaitForSeconds(Attack_Cooltime);
+        Player_state ps = state;
+        use = false;
+
+            state = Player_state.None;
+            if (Input.GetAxis("Horizontal") != 0)
+            {
+                animator.SetBool("Move", true);
+            }
+            animator.SetBool(ps.ToString(), false);
+
+        float cool = 0;
+        for(int i = 0; i < skill.Length;  i++)
+        {
+            if (skill[i].state == state)
+            {
+                cool = skill[i].Damage;
+            }
+        }
+        yield return new WaitForSeconds(cool);
         is_wait = false;
     }
 
@@ -268,9 +418,16 @@ public class Player : MonoBehaviour
         return Energy;
     }
 
-    public float Get_Attack_Cool()
+    public float Get_Attack_Cool(Player_state ps)
     {
-        return Attack_Cooltime;
+        for(int i=0; i < skill.Length; i++)
+        {
+            if (skill[i].state == ps)
+            {
+                return skill[i].Cooltime;
+            }
+        }
+        return 0;
     }
 
     private void Resource_UP(ref float Resources)

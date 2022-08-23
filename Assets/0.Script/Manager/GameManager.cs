@@ -36,6 +36,24 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    public void Next_Scene()
+    {
+        if(scene_number + 1 > scene.Length )
+        {
+            Loading.Load(scene[0]);
+        }
+        else
+        {
+            Loading.Load(scene[++scene_number]);
+        }
+    }
+
+    public void home()
+    {
+        scene_number = 0;
+        Loading.Load(scene[scene_number]);
+    }
+
     public void Win()
     {
         is_Game = false;
@@ -62,5 +80,22 @@ public class GameManager : MonoBehaviour
         return scene[n];
     }
 
+    public string Get_Scene()
+    {
+        return scene[scene_number];
+    }
 
+    public string Scene_Name()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            Next_Scene();
+
+        }
+    }
 }

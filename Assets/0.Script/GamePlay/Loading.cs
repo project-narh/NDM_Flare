@@ -10,6 +10,7 @@ public class Loading : MonoBehaviour
     [SerializeField] private float Timer;
     [SerializeField] private Image image;
     [SerializeField] private Text text;
+    
     public static void Load(string Scene)
     {
         scene = Scene;
@@ -24,12 +25,12 @@ public class Loading : MonoBehaviour
 
     IEnumerator Loading_Start()
     {
+        Time.timeScale = 1;
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(scene);
         asyncOperation.allowSceneActivation = false;
         bool is_timer = false;
         float t = 0;
         float n = 0;
-
         if(Timer != 0) is_timer = true;
         while(!asyncOperation.isDone)
         {

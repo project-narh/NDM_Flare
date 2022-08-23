@@ -1,31 +1,83 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-// 시간이 지나면 디버프를 주기 위한 스크립트
+public enum Debuff
+{
+
+}
+
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float timer;
-    private float N_timer = 0;
-    private bool is_Use = false;
+    [Header("제한시간 타이머")]
+    [SerializeField] private float limit_timer;
+    [SerializeField] private bool is_Use = true;
+    [SerializeField] private Image image;
+
+    private float n_timer = 0; // 제한시간 타이머
 
     private void Awake()
     {
-        N_timer = 0;
-        is_Use = false;
+        n_timer = 0;
+        is_Use = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!is_Use)
+        if (is_Use)
         {
-            N_timer+= Time.deltaTime;
-            if(N_timer >=timer)
+            if(is_check(ref n_timer,limit_timer))
             {
-                is_Use=true;
-                
+                is_Use = false;
             }
         }
     }
+
+    private bool is_check(ref float t, float ti)
+    {
+        t += Time.deltaTime;
+        if (t >= ti)
+        {
+            StartCoroutine(Stop());
+            return true;
+        }
+        return false;
+    }
+
+    private IEnumerator Stop()
+    {
+        Color color = image.color;
+        color.a = 0;
+        image.color = color;
+        image.gameObject.SetActive(true);
+        float timer = 0;
+        while(timer < 1f)
+        {
+            Debug.Log(timer);
+            color = image.color;
+            timer += Time.deltaTime;
+            color.a = timer;
+            image.color= color;
+            yield return null;
+        }
+        Mob_Storage.Instance.Start_Debuff(DeBuff.stiffness);
+        yield return new WaitForSeconds(1f);
+        while (0f < timer)
+        {
+            color = image.color;
+            timer -= Time.deltaTime;
+            color.a = timer;
+            image.color = color;
+            yield return null;
+        }
+
+        color = image.color;
+        color.a = 0;
+        image.color = color;
+
+        image.gameObject.SetActive(false);
+    }
+
 }

@@ -1,0 +1,139 @@
+
+Bomber.png
+size: 968,1060
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Barrel
+  rotate: true
+  xy: 2, 619
+  size: 439, 546
+  orig: 439, 546
+  offset: 0, 0
+  index: -1
+Barrel fire1
+  rotate: true
+  xy: 154, 123
+  size: 63, 82
+  orig: 63, 82
+  offset: 0, 0
+  index: -1
+Barrel fire2
+  rotate: false
+  xy: 669, 29
+  size: 65, 90
+  orig: 65, 90
+  offset: 0, 0
+  index: -1
+Barrel fire3
+  rotate: false
+  xy: 517, 35
+  size: 77, 84
+  orig: 77, 84
+  offset: 0, 0
+  index: -1
+Barrel fire4
+  rotate: false
+  xy: 596, 31
+  size: 71, 88
+  orig: 71, 88
+  offset: 0, 0
+  index: -1
+Barrel wick
+  rotate: true
+  xy: 186, 16
+  size: 27, 329
+  orig: 27, 329
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 372
+  size: 294, 245
+  orig: 294, 245
+  offset: 0, 0
+  index: -1
+Foot back
+  rotate: false
+  xy: 317, 67
+  size: 193, 151
+  orig: 193, 151
+  offset: 0, 0
+  index: -1
+Foot front
+  rotate: true
+  xy: 154, 188
+  size: 182, 155
+  orig: 182, 155
+  offset: 0, 0
+  index: -1
+Leg back
+  rotate: false
+  xy: 317, 392
+  size: 179, 225
+  orig: 179, 225
+  offset: 0, 0
+  index: -1
+Leg front
+  rotate: true
+  xy: 751, 2
+  size: 188, 201
+  orig: 188, 201
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: true
+  xy: 186, 45
+  size: 74, 129
+  orig: 74, 129
+  offset: 0, 0
+  index: -1
+Pelvis
+  rotate: true
+  xy: 2, 156
+  size: 214, 150
+  orig: 214, 150
+  offset: 0, 0
+  index: -1
+Rope
+  rotate: true
+  xy: 550, 121
+  size: 555, 199
+  orig: 555, 199
+  offset: 0, 0
+  index: -1
+Spine
+  rotate: true
+  xy: 2, 24
+  size: 95, 182
+  orig: 95, 182
+  offset: 0, 0
+  index: -1
+Thigh back
+  rotate: true
+  xy: 751, 192
+  size: 200, 215
+  orig: 200, 215
+  offset: 0, 0
+  index: -1
+Thigh front
+  rotate: true
+  xy: 317, 220
+  size: 170, 193
+  orig: 170, 193
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 550, 678
+  size: 380, 394
+  orig: 380, 394
+  offset: 0, 0
+  index: -1
+pants and belt
+  rotate: true
+  xy: 751, 394
+  size: 282, 214
+  orig: 282, 214
+  offset: 0, 0
+  index: -1

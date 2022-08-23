@@ -7,13 +7,19 @@ public class Core : MonoBehaviour
 {
     [SerializeField] float HP;
     [SerializeField] float MaxHP;
+    List<Mob> list = new List<Mob>();
     public int num;
     protected Spawner spawner;
     Player p;
 
-    private void Start()
+    private void Awake()
     {
         p = GameObject.FindWithTag("Player").GetComponent<Player>();
+    }
+
+    private void Start()
+    {
+        //p = GameObject.FindWithTag("Player").GetComponent<Player>();
         spawner = GetComponent<Spawner>();
         HP = MaxHP;
         Init();
@@ -42,10 +48,24 @@ public class Core : MonoBehaviour
         p.Dead();
     }
 
+/*    public void Spawn(int n, bool team = true)
+    {
+        Mob_Storage.Instance.Add_Mob(spawner.Spawn(n).GetComponent<Mob>(), team);
+    }*/
+
     public void Spawn(int n)
     {
-        spawner.Spawn(n);
-       //Debug.Log("º“»Ø");
+        Mob_Storage.Instance.Add_Mob(spawner.Spawn(n).GetComponent<Mob>(), true);
+    }
+
+    public void Spawn_e(int n)
+    {
+        Mob_Storage.Instance.Add_Mob(spawner.Spawn(n).GetComponent<Mob>(), false);
+    }
+
+    public virtual void Spawn_Gollem()
+    {
+        spawner.Spawn(3);
     }
 
     public float Get_Max_Hp()
@@ -67,4 +87,6 @@ public class Core : MonoBehaviour
     {
 
     }
+
+
 }

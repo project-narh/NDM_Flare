@@ -1,0 +1,213 @@
+{
+"skeleton": {
+	"hash": "ILQdxneHo5unndsyRnRsIOCAU2w=",
+	"spine": "3.8.0",
+	"x": -710.24,
+	"y": -144.19,
+	"width": 1426,
+	"height": 1629,
+	"images": "./images/",
+	"audio": "F:/2022NDM/Bomber/Effect"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "1", "parent": "root", "y": -416.82 },
+	{ "name": "01 Flash", "parent": "1", "y": 1179.48, "color": "ff0000ff" },
+	{ "name": "2", "parent": "root", "y": -551.15 },
+	{ "name": "02 Flash", "parent": "2", "y": 1321.15, "color": "4aff00ff" },
+	{ "name": "02 Bubble", "parent": "2", "y": 1310.32, "color": "4aff00ff" },
+	{ "name": "02Bbubble 2", "parent": "2", "y": 1341.75, "color": "4aff00ff" },
+	{ "name": "3", "parent": "root", "y": -672.89 },
+	{ "name": "03 Cloud", "parent": "3", "y": 1437.54, "color": "002fffff" },
+	{ "name": "03 Flash", "parent": "03 Cloud", "y": 82.08, "color": "002fffff" },
+	{ "name": "04 Ash", "parent": "root" }
+],
+"slots": [
+	{ "name": "04 Ash", "bone": "04 Ash", "attachment": "04 Ash" },
+	{ "name": "03 Flash", "bone": "03 Flash", "attachment": "03 Flash" },
+	{ "name": "03 Cloud", "bone": "03 Cloud", "attachment": "03 Cloud" },
+	{ "name": "03 Cloud Fire", "bone": "03 Cloud", "attachment": "03 Cloud Fire", "blend": "additive" },
+	{ "name": "01 Flash", "bone": "01 Flash", "attachment": "01 Flash" },
+	{ "name": "02Bbubble 2", "bone": "02Bbubble 2", "attachment": "02Bbubble 2" },
+	{ "name": "02 Bubble", "bone": "02 Bubble", "attachment": "02 Bubble" },
+	{ "name": "02 Flash", "bone": "02 Flash", "attachment": "02 Flash" },
+	{ "name": "BoundingBox_Explosion", "bone": "root", "color": "13ff00ff", "attachment": "BoundingBox_Explosion" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"02 Bubble": {
+				"02 Bubble": { "x": 2.76, "y": 12.64, "width": 1336, "height": 1336 }
+			},
+			"BoundingBox_Explosion": {
+				"BoundingBox_Explosion": {
+					"type": "boundingbox",
+					"vertexCount": 4,
+					"vertices": [ -574.7, 1343.3, 569.16, 1351.64, 580.92, 89.19, -576.39, 84.03 ]
+				}
+			},
+			"02Bbubble 2": {
+				"02Bbubble 2": { "x": 2.76, "y": -18.79, "width": 1426, "height": 1426 }
+			},
+			"01 Flash": {
+				"01 Flash": { "x": 109.26, "y": 77.15, "width": 1027, "height": 1110 }
+			},
+			"02 Flash": {
+				"02 Flash": { "x": 3.26, "y": -0.69, "width": 459, "height": 403 }
+			},
+			"03 Flash": {
+				"03 Flash": { "x": -26.24, "y": -5.92, "width": 1312, "height": 944 }
+			},
+			"03 Cloud": {
+				"03 Cloud": { "x": -10.24, "y": 38.67, "width": 866, "height": 1085 }
+			},
+			"04 Ash": {
+				"04 Ash": { "x": 3.26, "y": -8.19, "width": 1121, "height": 272 }
+			},
+			"03 Cloud Fire": {
+				"03 Cloud Fire": { "x": 116.26, "y": 85.67, "width": 327, "height": 527 }
+			}
+		}
+	}
+],
+"animations": {
+	"Effect_Bomber_Explosion": {
+		"slots": {
+			"03 Cloud": {
+				"color": [
+					{ "color": "00000000", "curve": "stepped" },
+					{ "time": 0.1667, "color": "00000000", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffff55", "curve": 0.25, "c3": 0.75 },
+					{ "time": 1, "color": "00000000" }
+				]
+			},
+			"BoundingBox_Explosion": {
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.1667, "name": "BoundingBox_Explosion" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"02 Flash": {
+				"color": [
+					{ "time": 0.1667, "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5667, "color": "ffffff00" }
+				]
+			},
+			"01 Flash": {
+				"color": [
+					{ "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.1667, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffff00" }
+				]
+			},
+			"03 Flash": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"02Bbubble 2": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"04 Ash": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "color": "ffffffff", "curve": 0.25, "c4": 0 },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			},
+			"02 Bubble": {
+				"color": [
+					{ "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			},
+			"03 Cloud Fire": {
+				"color": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffff00", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "color": "ffffffff", "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.6667, "color": "00000000" }
+				]
+			}
+		},
+		"bones": {
+			"01 Flash": {
+				"rotate": [
+					{ "angle": 1.2 }
+				],
+				"scale": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.1667, "x": 0, "y": 0 }
+				]
+			},
+			"02 Flash": {
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.1667, "x": 0, "y": 0, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "x": 3, "y": 3, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"02 Bubble": {
+				"scale": [
+					{ "x": 0, "y": 0, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 0, "y": 0 }
+				]
+			},
+			"02Bbubble 2": {
+				"scale": [
+					{ "x": 0, "y": 0, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.5, "y": 1.5 }
+				]
+			},
+			"03 Cloud": {
+				"translate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 1, "y": 26.38 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.2333, "x": 0.5, "y": 0.5, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.3333, "x": 1.3, "y": 1.3, "curve": 0.25, "c3": 0.75 },
+					{ "time": 0.5, "x": 1.35, "y": 1.431 }
+				]
+			},
+			"03 Flash": {
+				"scale": [
+					{ "time": 0.3333, "curve": 0.25, "c3": 0.625, "c4": 0.5 },
+					{ "time": 0.5, "x": 1.25, "y": 1.179, "curve": 0.375, "c2": 0.5, "c3": 0.75 },
+					{ "time": 0.6667, "x": 1.5, "y": 1.5 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"BoundingBox_Explosion": {
+					"BoundingBox_Explosion": [
+						{
+							"vertices": [ 518.6732, -566.3166, -513.674, -573.84076, -524.2895, 565.5384, 520.20264, 570.1924 ],
+							"curve": 0.25,
+							"c3": 0.75
+						},
+						{ "time": 0.3333 }
+					]
+				}
+			}
+		}
+	}
+}
+}

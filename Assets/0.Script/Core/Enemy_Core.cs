@@ -38,6 +38,7 @@ public class Enemy_Core : Core
 {
     [SerializeField] private Wave[] wave;
     Coroutine co;
+    int number = 0;
 
     protected override void Dead()
     {
@@ -46,32 +47,50 @@ public class Enemy_Core : Core
 
     protected override void Init()
     {
+        SoundManager.Instance.play_BGM(GameManager.Instance.Get_Scene());
+        UIManager.Instance.Check();
         co = StartCoroutine(wave_spawn(wave));
+        //SoundManager.Instance.play_BGM(GameManager.Instance.Scene_Name());
+    }
+
+    public void Spawn(string name)
+    {
+        spawner.Spawn(name);
     }
 
     IEnumerator wave_spawn(Wave[] wave)
     {
         for (int i = 0; i < wave.Length; i++)
         {
+            number++;
             num = i;
-            Debug.Log("===========[Stage]===========");
+/*            Debug.Log("===========[Stage]===========");
             Debug.Log("Monster : " + wave[i].Count);
             Debug.Log("delay : " + wave[i].delay);
-            Debug.Log("=============================");
+            Debug.Log("=============================");*/
             for (int j = 0; j < wave[i].Spawn_Count(); j++)
             {
-                Spawn(wave[i].Spawn_number());
+                Spawn_e(wave[i].Spawn_number());
                 yield return new WaitUntil(() => spawner.Get_spawn());
             }
             yield return new WaitForSeconds(wave[i].Wave_delay());
         }
         co = StartCoroutine(wave_spawn(wave));
     }
-
+    public void Spawn_boss()
+    {
+        Spawn_e(4);
+    }
     public Wave Get(int i)
     {
         return wave[i];
     }
+
+    public float Get_wave()
+    {
+        return number;
+    }
+
     public void Set(int i, int count, float delay)
     {
         wave[i].Set(count,delay);
@@ -82,5 +101,10 @@ public class Enemy_Core : Core
         Debug.Log("스테이지 초기화");
         StopCoroutine(co);
         co = StartCoroutine(wave_spawn(wave));
+    }
+
+    public override void Spawn_Gollem()
+    {
+        Spawn_e(3);
     }
 }

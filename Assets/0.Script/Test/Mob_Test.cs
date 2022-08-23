@@ -48,13 +48,9 @@ public struct Mob_s
 [System.Serializable]
 public struct Player_s
 {
-    /*    [SerializeField] private InputField Max;
-        [SerializeField] private InputField A_cool;
-        [SerializeField] private InputField A_damage;
-        [SerializeField] private InputField speed;*/
     [SerializeField] private TMP_InputField Max;
-    [SerializeField] private TMP_InputField A_cool;
-    [SerializeField] private TMP_InputField A_damage;
+    [SerializeField] private TMP_InputField skill1_d;
+    [SerializeField] private TMP_InputField skill2_d;
     [SerializeField] private TMP_InputField speed;
 
     private void relay(ref TMP_InputField f, float num)
@@ -70,14 +66,14 @@ public struct Player_s
     public void Setting(Player p)
     {
         relay(ref Max, p.MAX_HP);
-        relay(ref A_cool, p.Attack_Cooltime);
-        relay(ref A_damage, p.Attack_Damage);
+        relay(ref skill1_d, p.skill[0].Damage);
+        relay(ref skill2_d, p.skill[1].Damage);
         relay(ref speed, p.Speed);
     }
 
     public void apply(ref Player p)
     {
-        p.Set(relay(Max), relay(A_cool), relay(A_damage), relay(speed));
+        p.Set(relay(Max), relay(speed), relay(skill1_d), relay(skill2_d));
     }
 }
 
@@ -114,6 +110,7 @@ public class Mob_Test : MonoBehaviour
     [SerializeField] Player_s p;
     [SerializeField] private Pooling[] pool;
     [SerializeField] Button[] button; // 0 : mob , 1 : stage , 2 : applay
+    [SerializeField] int n;
 
     Player player;
     Core C;
@@ -144,7 +141,8 @@ public class Mob_Test : MonoBehaviour
             }
         }
         GameObject[] o = GameObject.FindGameObjectsWithTag("Spawner");
-        for(int i = 0; i < o.Length; i++)
+        pool = new Pooling[o.Length];
+        for (int i = 0; i < o.Length; i++)
         {
             pool[i] = o[i].GetComponent<Pooling>();
         }

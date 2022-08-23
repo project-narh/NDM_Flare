@@ -16,11 +16,13 @@ public class GameOver_UI : MonoBehaviour
 
     private void On_Replay()
     {
+        SoundManager.Instance.play_sfx("UI");
         GameManager.Instance.Replay();
     }
 
     private void On_Menu()
     {
+        SoundManager.Instance.play_sfx("UI");
         GameManager.Instance.loading(GameManager.Instance.Get_Scene(0));
     }
 }

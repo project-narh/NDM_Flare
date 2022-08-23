@@ -1,0 +1,33 @@
+
+Poweroverwhelming.png
+size: 2175,2054
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+poweroverwherming1
+  rotate: false
+  xy: 2, 2
+  size: 2171, 2050
+  orig: 2171, 2050
+  offset: 0, 0
+  index: -1
+
+Poweroverwhelming2.png
+size: 2364,2083
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+poweroverwherming2
+  rotate: false
+  xy: 2, 1029
+  size: 2360, 1052
+  orig: 2360, 1052
+  offset: 0, 0
+  index: -1
+poweroverwherming3
+  rotate: false
+  xy: 2, 2
+  size: 2360, 1025
+  orig: 2360, 1025
+  offset: 0, 0
+  index: -1

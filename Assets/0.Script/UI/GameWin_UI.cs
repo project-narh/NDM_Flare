@@ -16,11 +16,13 @@ public class GameWin_UI : MonoBehaviour
 
     private void On_Next()
     {
-        GameManager.Instance.Replay();
+        SoundManager.Instance.play_sfx("UI");
+        GameManager.Instance.Next_Scene();
     }
 
     private void On_Menu()
     {
+        SoundManager.Instance.play_sfx("UI");
         GameManager.Instance.loading(GameManager.Instance.Get_Scene(0));
     }
 }

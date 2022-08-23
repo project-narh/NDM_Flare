@@ -56,19 +56,38 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void Spawn(int n)
+/*    public void Spawn(int n)
     {
         if (is_spawn)
         {
             if (s_mob[n].mob != null)
             {
+                GameObject mob;
                 Vector3 pos = transform.position;
                 pos.y = Random.Range(limit.x, limit.y + 1);
-                pool[n].Active(pos);
+                mob = pool[n].Active(pos);
                 is_spawn = false;
                 StartCoroutine(Spawn_Cool());
             }
         }
+    }*/
+
+    public GameObject Spawn(int n)
+    {
+        if (is_spawn)
+        {
+            if (s_mob[n].mob != null)
+            {
+                GameObject mob;
+                Vector3 pos = transform.position;
+                pos.y = Random.Range(limit.x, limit.y + 1);
+                mob = pool[n].Active(pos);
+                is_spawn = false;
+                StartCoroutine(Spawn_Cool());
+                return mob;
+            }
+        }
+        return null;
     }
 
     public float Spawn_limit(int n)
@@ -119,7 +138,7 @@ public class Spawner : MonoBehaviour
             empty.transform.SetParent(path);
             pool[i] = empty.AddComponent<Pooling>();
             empty.tag = "Spawner";
-            pool[i].Init(s_mob[i].mob, empty.transform);
+            pool[i].Init(s_mob[i].mob, empty.transform); 
         }
     }
 }
